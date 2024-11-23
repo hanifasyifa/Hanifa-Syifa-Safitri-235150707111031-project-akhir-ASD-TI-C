@@ -1,0 +1,80 @@
+Aplikasi Sorting dengan GUI
+
+- Aplikasi ini adalah implementasi visualisasi algoritma sorting menggunakan Java.
+- Bubble Sort dan Selection Sort dengan tampilan GUI.
+
+Project ini menggunakan struktur:
+- Package interfaces untuk kontrak algoritma
+- Package algorithms untuk implementasi sorting
+- Package gui untuk tampilan user interface
+- Package utils untuk fungsi-fungsi bantuan
+
+FILES:
+------------------------------
+---interfaces/Sortable.java---
+Interface Sortable berfungsi sebagai kontrak yang harus diikuti oleh setiap algoritma sorting. 
+Ini memastikan konsistensi dan memudahkan penambahan algoritma baru nantinya.
+
+---algorithm/BubbleSort.java---
+bagaimana Bubble Sort bekerja:
+1. Algoritma membandingkan dua elemen bersebelahan
+2. Jika elemen kiri lebih besar dari kanan, keduanya ditukar
+3. Proses ini berulang hingga tidak ada lagi pertukaran yang diperlukan
+
+Contoh: [64, 34, 25, 12]
+Iterasi 1: [34, 64, 25, 12] -> [34, 25, 64, 12] -> [34, 25, 12, 64]
+Iterasi 2: [25, 34, 12, 64] -> [25, 12, 34, 64]
+Iterasi 3: [12, 25, 34, 64]
+
+---algorithm/SelectionSort.java---
+Selection Sort bekerja dengan cara berbeda:
+1. Mencari elemen terkecil dalam array tidak terurut
+2. Menukar dengan elemen pertama array tidak terurut
+3. Melanjutkan ke elemen berikutnya
+
+Contoh: [64, 34, 25, 12]
+Iterasi 1: mencari minimum (12) -> [12, 34, 25, 64]
+Iterasi 2: mencari minimum di sisa array (25) -> [12, 25, 34, 64]
+Iterasi 3: mencari minimum di sisa array (34) -> [12, 25, 34, 64]
+
+---GUI---
+GUI terdiri dari beberapa komponen utama:
+1. Spinner untuk memilih ukuran array
+2. Tombol Generate untuk membuat array acak
+3. Combo box untuk memilih algoritma
+4. Visualisasi array dalam bentuk bar chart
+5. Area output untuk melihat hasil dan waktu eksekusi
+
+---DEMO---
+Mari kita coba aplikasinya:
+1. Pilih ukuran array, misalnya 10 elemen
+2. Klik Generate untuk membuat array acak
+3. Pilih algoritma Bubble Sort
+4. Klik Sort dan perhatikan hasilnya
+5. Sekarang kita coba dengan Selection Sort
+6. Bandingkan waktu eksekusi keduanya
+
+---Visualisasi---
+Visualisasi menggunakan bar chart membantu memahami:
+1. Tinggi bar menunjukkan nilai elemen
+2. Posisi bar menunjukkan indeks dalam array
+3. Perubahan warna menandakan proses sorting
+4. Nilai ditampilkan di atas setiap bar
+
+---Perbandingan kedua algoritma---
+1. Bubble Sort:
+   - Kompleksitas waktu O(n²)
+   - Lebih banyak pertukaran
+   - Bagus untuk array kecil atau hampir terurut
+
+2. Selection Sort:
+   - Kompleksitas waktu O(n²)
+   - Lebih sedikit pertukaran
+   - Performa lebih konsisten
+
+---Kesimpulan--- 
+dari implementasi ini:
+1. Visualisasi membantu memahami cara kerja algoritma
+2. Interface memudahkan penambahan algoritma baru
+3. GUI interaktif memungkinkan eksperimen dengan berbagai ukuran input
+4. Kedua algoritma memiliki kelebihan dan kekurangan masing-masing
